@@ -19,8 +19,8 @@
   <button on:click="{result.zero}">0</button>
   <button on:click="{result.fra}">%</button>
   <button on:click="{result.div}" class="resalt">/</button>
-  <button on:click="{result.c}">CE</button>
-  <button on:click="{result.equal}"> = </button>
+  <button on:click="{result.c}" class="ce">CE</button>
+  <button on:click="{result.equal}" class="equal"> = </button>
 </div>
 
 <style lang="scss">
@@ -45,7 +45,16 @@
       position: relative;
       overflow: hidden;
       &.resalt {
-        background-color: var(--primary);
+        border-left: 2px solid var(--black);
+      }
+
+      &.ce {
+        background-color: #ff2e63;
+        border-radius: 0 0 0 8px;
+      }
+      &.equal {
+        background-color: #1fab89;
+        border-radius: 0 0 8px 0;
       }
       &::before {
         content: "";
